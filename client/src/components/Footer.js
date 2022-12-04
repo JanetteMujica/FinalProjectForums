@@ -17,9 +17,13 @@ const Footer = () => {
 		if (regEx.test(email)) {
 			setMessage('Merci =)');
 		} else if (!regEx.test(email)) {
-			setMessage('Les courriels ont le format suivant: usager@domaine.com');
+			setMessage(
+				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
+			);
 		} else if (email !== '') {
-			setMessage('Les courriels ont le format suivant: usager@domaine.com');
+			setMessage(
+				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
+			);
 		} else {
 			setMessage('');
 		}
@@ -52,9 +56,6 @@ const Footer = () => {
 
 	return (
 		<>
-			{/* 			<FormEmail>
-				<EmailListForm />
-			</FormEmail> */}
 			<FormWrapper>
 				<Form
 					onSubmit={(e) => {

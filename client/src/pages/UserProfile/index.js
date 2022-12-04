@@ -24,7 +24,7 @@ const UserProfile = () => {
 			.catch((err) => {
 				console.log('err', err);
 			});
-	}, []);
+	}, [email]);
 
 	useEffect(() => {
 		fetch(`/userComments/${email}`)
@@ -36,7 +36,7 @@ const UserProfile = () => {
 			.catch((err) => {
 				console.log('err', err);
 			});
-	}, []);
+	}, [email]);
 
 	if (isLoading) {
 		return <div>Loading ...</div>;

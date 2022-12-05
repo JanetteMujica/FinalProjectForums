@@ -20,7 +20,7 @@ const Footer = () => {
 			setMessage(
 				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
 			);
-		} else if (email !== '') {
+		} else if (email != '') {
 			setMessage(
 				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
 			);

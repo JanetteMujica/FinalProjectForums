@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import LogoutButton from '../../components/LogoutButton';
 import { CircularProgress } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import { device } from '../../components/MediaQueries';
 
 const UserProfile = () => {
 	const indicatorSize = 80;
@@ -135,6 +136,12 @@ const Wrapper = styled.section`
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
+	@media ${device.laptop} {
+		max-width: 1075px;
+		margin-top: 10em;
+		margin-bottom: 5em;
+		margin-left: 180px;
+	}
 `;
 
 const TitreSection = styled.section`
@@ -147,7 +154,11 @@ const TitrePage = styled.h1`
 	font-weight: 700;
 `;
 
-const ProfileSection = styled.section``;
+const ProfileSection = styled.section`
+	@media ${device.laptop} {
+		text-align: right;
+	}
+`;
 
 const CommentSection = styled.section``;
 
